@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tweets for {{results['user']}}</title>
+</head>
+<style type="text/css">
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+</style>
+<body>
+
+<h1 style="font-size:130%; font-family:Verdana, sans-serif;">Tweets for {{results['user']}}</h1>
+
+<p style="font-size:80%; font-family:Verdana, sans-serif;">Median sentiment score: {{results['medi_score']}} (-1.0 negative to 1.0 positive)
+
+<ul>
+    {% for element in results['tweets'] %}
+        <li style="list-style:square; font-size:70%; font-family:Verdana, sans-serif; color:{{element['color']}}">
+            {{element['score']}}: <a style="color:{{element['color']}}" href="https://twitter.com/{{results['user']}}/status/{{element['id']}}">{{element['text']}}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
