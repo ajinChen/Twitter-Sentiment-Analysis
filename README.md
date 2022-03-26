@@ -6,7 +6,7 @@ The motivation of this repo is to build a remote web server on AWS which can pul
 
 This web application can display the most recent 100 tweets from a given user with red to green gradient color corresponding to the sentiment score and the list of most popular users followed by a given user.
 
-<img src="images/ex1.png" width="400" > <img src="images/ex2.png" width="400"> 
+<img src="images/ex1.png" width="300" > <img src="images/ex2.png" width="300" align='right'> 
 
 ## Requirements
 
@@ -24,13 +24,6 @@ There are some general library requirements for twitter data mining and launchin
 
 The whole directory structure of this project show below:
 
-* `tweetie.py` : a series of functions for Twitter data mining
-* `server.py` : Main file to create server
-* `tweepy_key.csv` : authentication credentials
-* `image.ico` : Web icon image
-* `templates` : Front-end templates
-* `IP.txt` : the public IP address of your server, such as `54.176.42.135:5000`
-
 ```
 $ project_dir
 ├── tweetie.py
@@ -42,6 +35,13 @@ $ project_dir
 │   └── tweets.html
 └── IP.txt
 ```
+
+* `tweetie.py` : a series of functions for Twitter data mining
+* `server.py` : Main file to create server
+* `tweepy_key.csv` : authentication credentials
+* `image.ico` : Web icon image
+* `templates` : Front-end templates
+* `IP.txt` : the public IP address of your server, such as `54.176.42.135:5000`
 
 
 
@@ -191,6 +191,6 @@ Run your web application on EC2:
 $ gunicorn -D --threads 1 -b 0.0.0.0:5000 --access-logfile server.log --timeout 60 server:app tweepy_key.csv
 ```
 
-Congregation! You successfully launch the web server for Twitter sentiment analysis. 
-
 All output goes into `server.log`, even after you log out. The `-D` means put the server in daemon mode, which runs the background.
+
+Congregation! You successfully launch the web server for Twitter sentiment analysis.
