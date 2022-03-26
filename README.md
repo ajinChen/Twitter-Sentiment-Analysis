@@ -6,7 +6,7 @@ The motivation of this repo is to build a remote web server on AWS which can pul
 
 This web application can display the most recent 100 tweets from a given user with red to green gradient color corresponding to the sentiment score and the list of most popular users followed by a given user.
 
-<img src="images/ex2.png" width="300" align='right'>
+<img src="images/ex1.png" width="300"> <img src="images/ex2.png" width="300" style="padding-left:15px">
 
 ## Requirements
 
@@ -138,7 +138,7 @@ def fetch_following(api,name):
 
 [jinja2](http://jinja.pocoo.org/docs/2.9/) is a template engine that built-in with Flask. Every time you call `render_template()` from a flask route method, it looks in the `templates` subdirectory for the file indicated in that function call. There are two different page templates writing in HTML for web front-end. 
 
-Here is what the main body of tweet's HTML looks like: <img src="images/ex1.png" width="200" align='right'>
+Here is what the main body of tweet's HTML looks like:
 
 ```html
 <body>
