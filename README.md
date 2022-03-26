@@ -6,7 +6,7 @@ The motivation of this repo is to build a remote web server on AWS which can pul
 
 This web application can display the most recent 100 tweets from a given user with red to green gradient color corresponding to the sentiment score and the list of most popular users followed by a given user.
 
-<img src="images/ex1.png" width="250" > <img src="images/ex2.png" width="250"> 
+<img src="images/ex1.png" width="400" > <img src="images/ex2.png" width="400"> 
 
 ## Requirements
 
